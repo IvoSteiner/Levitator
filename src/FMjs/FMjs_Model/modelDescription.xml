@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  fmiVersion="2.0"
+  modelName="LevitatorTestBench.FMUExport.System22ControlerSTI1"
+  guid="{434dbf0e-28b5-483b-bbcf-be8e7ac669ce}"
+  generationTool="Dymola Version 2022x (64-bit), 2021-12-08"
+  generationDateAndTime="2023-09-04T15:32:01Z"
+  variableNamingConvention="structured"
+  numberOfEventIndicators="16">
+  <CoSimulation
+    modelIdentifier="LevitatorTestBench_FMUExport_System22ControlerSTI1"
+    canHandleVariableCommunicationStepSize="true"
+    canInterpolateInputs="true"
+    maxOutputDerivativeOrder="1"
+    canNotUseMemoryManagementFunctions="true"
+    canGetAndSetFMUstate="true"
+    canSerializeFMUstate="true"
+    providesDirectionalDerivative="true">
+    <SourceFiles>
+      <File
+        name="all.c"/>
+    </SourceFiles>
+  </CoSimulation>
+  <UnitDefinitions>
+    <Unit
+      name="m">
+      <BaseUnit m="1"/>
+    </Unit>
+    <Unit
+      name="rev/min">
+      <BaseUnit s="-1"
+        rad="1"
+        factor="0.10471975511965977"/>
+    </Unit>
+  </UnitDefinitions>
+  <TypeDefinitions>
+    <SimpleType
+      name="Modelica.Units.NonSI.AngularVelocity_rpm">
+      <Real
+        quantity="AngularVelocity"
+        unit="rev/min"/>
+    </SimpleType>
+    <SimpleType
+      name="Modelica.Units.SI.Height">
+      <Real
+        quantity="Length"
+        unit="m"
+        min="0.0"/>
+    </SimpleType>
+  </TypeDefinitions>
+  <DefaultExperiment startTime="0.0"
+    stopTime="220.0"
+    tolerance="1E-08"/>
+  <ModelVariables>
+    <!-- Index for next variable = 1 -->
+    <ScalarVariable
+      name="res.height"
+      valueReference="637569122">
+      <Real
+        declaredType="Modelica.Units.SI.Height"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 2 -->
+    <ScalarVariable
+      name="res.setHeightCLC"
+      valueReference="234881030"
+      variability="tunable">
+      <Real
+        declaredType="Modelica.Units.SI.Height"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 3 -->
+    <ScalarVariable
+      name="res.setUFanOLC"
+      valueReference="234881031"
+      variability="tunable">
+      <Real
+        declaredType="Modelica.Units.NonSI.AngularVelocity_rpm"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 4 -->
+    <ScalarVariable
+      name="res.setUFanEff"
+      valueReference="637569844">
+      <Real
+        declaredType="Modelica.Units.NonSI.AngularVelocity_rpm"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 5 -->
+    <ScalarVariable
+      name="par.PID_P"
+      valueReference="16777217"
+      causality="parameter"
+      variability="tunable">
+      <Real start="150000"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 6 -->
+    <ScalarVariable
+      name="par.PID_I"
+      valueReference="16777218"
+      causality="parameter"
+      variability="tunable">
+      <Real start="0.5"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 7 -->
+    <ScalarVariable
+      name="par.PID_D"
+      valueReference="16777219"
+      causality="parameter"
+      variability="tunable">
+      <Real start="0.3"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 8 -->
+    <ScalarVariable
+      name="par.isCLC"
+      valueReference="16777220"
+      description="Closed loop control is active"
+      causality="parameter"
+      variability="tunable">
+      <Boolean start="true"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 9 -->
+    <ScalarVariable
+      name="par.stepOrDirValvePos"
+      valueReference="16777221"
+      description="Valve Input for Dirac or Step"
+      causality="parameter"
+      variability="tunable">
+      <Real min="0.0"
+        max="1.0"
+        start="1"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 10 -->
+    <ScalarVariable
+      name="par.setPointCLC"
+      valueReference="16777222"
+      description="Set point closed loop control / pingpong ball heigth"
+      causality="parameter"
+      variability="tunable">
+      <Real
+        declaredType="Modelica.Units.SI.Height"
+        start="0.15"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 11 -->
+    <ScalarVariable
+      name="par.setPointOLC"
+      valueReference="16777223"
+      description="Set point open loop control / fan rpm"
+      causality="parameter"
+      variability="tunable">
+      <Real
+        declaredType="Modelica.Units.NonSI.AngularVelocity_rpm"
+        start="0"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 12 -->
+    <ScalarVariable
+      name="par.opFan"
+      valueReference="16777224"
+      description="Operating Point of fan"
+      causality="parameter"
+      variability="fixed">
+      <Real
+        declaredType="Modelica.Units.NonSI.AngularVelocity_rpm"
+        start="5000"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 13 -->
+    <ScalarVariable
+      name="concealed1"
+      valueReference="33554432">
+      <Real nominal="0.0001"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 14 -->
+    <ScalarVariable
+      name="concealed2"
+      valueReference="587202560">
+      <Real derivative="13"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 15 -->
+    <ScalarVariable
+      name="concealed3"
+      valueReference="33554433">
+      <Real derivative="13"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 16 -->
+    <ScalarVariable
+      name="concealed4"
+      valueReference="587202561">
+      <Real derivative="15"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 17 -->
+    <ScalarVariable
+      name="concealed5"
+      valueReference="33554434">
+      <Real/>
+    </ScalarVariable>
+    <!-- Index for next variable = 18 -->
+    <ScalarVariable
+      name="concealed6"
+      valueReference="587202562">
+      <Real derivative="17"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 19 -->
+    <ScalarVariable
+      name="concealed7"
+      valueReference="33554435">
+      <Real/>
+    </ScalarVariable>
+    <!-- Index for next variable = 20 -->
+    <ScalarVariable
+      name="concealed8"
+      valueReference="587202563">
+      <Real derivative="19"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 21 -->
+    <ScalarVariable
+      name="concealed9"
+      valueReference="33554436">
+      <Real/>
+    </ScalarVariable>
+    <!-- Index for next variable = 22 -->
+    <ScalarVariable
+      name="concealed10"
+      valueReference="587202564">
+      <Real derivative="21"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 23 -->
+    <ScalarVariable
+      name="concealed11"
+      valueReference="33554437">
+      <Real/>
+    </ScalarVariable>
+    <!-- Index for next variable = 24 -->
+    <ScalarVariable
+      name="concealed12"
+      valueReference="587202565">
+      <Real derivative="23"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 25 -->
+    <ScalarVariable
+      name="concealed13"
+      valueReference="33554438">
+      <Real/>
+    </ScalarVariable>
+    <!-- Index for next variable = 26 -->
+    <ScalarVariable
+      name="concealed14"
+      valueReference="587202566">
+      <Real derivative="25"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 27 -->
+    <ScalarVariable
+      name="concealed15"
+      valueReference="33554439">
+      <Real nominal="100000.0"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 28 -->
+    <ScalarVariable
+      name="concealed16"
+      valueReference="587202567">
+      <Real derivative="27"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 29 -->
+    <ScalarVariable
+      name="concealed17"
+      valueReference="33554440">
+      <Real nominal="300.0"/>
+    </ScalarVariable>
+    <!-- Index for next variable = 30 -->
+    <ScalarVariable
+      name="concealed18"
+      valueReference="587202568">
+      <Real derivative="29"/>
+    </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Derivatives>
+      <Unknown index="14"
+        dependencies="15"
+        dependenciesKind="fixed"/>
+      <Unknown index="16"
+        dependencies="13 15 19 21 25 27 29"
+        dependenciesKind="dependent dependent fixed fixed dependent dependent fixed"/>
+      <Unknown index="18"
+        dependencies="13"
+        dependenciesKind="fixed"/>
+      <Unknown index="20"
+        dependencies="13 19 21"
+        dependenciesKind="fixed fixed fixed"/>
+      <Unknown index="22"
+        dependencies="13 21"
+        dependenciesKind="fixed fixed"/>
+      <Unknown index="24"
+        dependencies="23"
+        dependenciesKind="fixed"/>
+      <Unknown index="26"
+        dependencies="23 25"
+        dependenciesKind="fixed fixed"/>
+      <Unknown index="28"
+        dependencies="13 15 19 21 25 27 29"
+        dependenciesKind="fixed dependent fixed fixed dependent dependent dependent"/>
+      <Unknown index="30"
+        dependencies="13 15 19 21 25 27 29"
+        dependenciesKind="fixed dependent fixed fixed dependent dependent dependent"/>
+    </Derivatives>
+    <InitialUnknowns>
+      <Unknown index="13"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="14"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="15"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="16"
+        dependencies="5 7 8 9 10 11"
+        dependenciesKind="dependent dependent dependent dependent dependent dependent"/>
+      <Unknown index="17"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="18"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="19"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="20"
+        dependencies="5 6 7 10"
+        dependenciesKind="dependent dependent dependent dependent"/>
+      <Unknown index="21"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="22"
+        dependencies="7"
+        dependenciesKind="dependent"/>
+      <Unknown index="23"
+        dependencies="9"
+        dependenciesKind="dependent"/>
+      <Unknown index="24"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="25"
+        dependencies="9"
+        dependenciesKind="dependent"/>
+      <Unknown index="26"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="28"
+        dependencies="5 7 8 9 10 11"
+        dependenciesKind="dependent dependent dependent dependent dependent dependent"/>
+      <Unknown index="29"
+        dependencies=""
+        dependenciesKind=""/>
+      <Unknown index="30"
+        dependencies="5 7 8 9 10 11"
+        dependenciesKind="dependent dependent dependent dependent dependent dependent"/>
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

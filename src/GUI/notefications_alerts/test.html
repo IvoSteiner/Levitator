@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="notification-box flex flex-col items-center justify-center fixed w-full z-50 p-3">
+            <!-- Notification container -->
+        </div>
+        <!-- Notification template
+      
+      <div class="relative flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3 rounded-md opacity-0 transform transition-all duration-500 mb-1">
+        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <p>New info alert!</p>
+      </div>
+      
+      -->
+        <section class="flex flex-col-reverse min-h-screen">
+            <div class="panel flex flex-wrap mx-auto gap-2 pb-3">
+                <button onClick="sendNotification('info', 'New info alert!')"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded self-bottom">
+                    Click me
+                </button>
+                <button onClick="sendNotification('error', 'New error alert!')"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded self-bottom">
+                    And me
+                </button>
+                <button onClick="sendNotification('warning', 'New warning alert!')"
+                    class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded self-bottom">
+                    Me too
+                </button>
+                <button onClick="sendNotification('success', 'New success alert!')"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded self-bottom">
+                    I'm here!
+                </button>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="./noteficationsAlerts.js"></script>
+    </body>
+
+</html>

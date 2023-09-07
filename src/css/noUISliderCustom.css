@@ -1,0 +1,58 @@
+/* Further information at: https://refreshless.com/nouislider/examples/ */
+
+.slider-styled .noUi-handle {
+  box-shadow: none;
+}
+
+/* Hide markers on slider handles */
+.slider-styled .noUi-handle::before,
+.slider-styled .noUi-handle::after {
+  display: none;
+}
+
+
+.slider-styled .noUi-handle .noUi-touch-area {
+  border: 1px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  width: auto;
+  height: auto;
+}
+
+/* Show a border when hovering the area the handle responds to */
+/* .slider-styled .noUi-handle:hover .noUi-touch-area {
+  border: 1px dashed #7f7f7f;
+} */
+
+/* width must be set here */
+/*   height: 10px;
+ */
+.slider {
+  height: 0.76vh;
+  width: 100%;
+}
+
+.slider .noUi-handle {
+  height: 1.6vh;
+  width: 1.6vh;
+  top: -0.45vh;
+  right: -0.8vh;
+  border-radius: 0.1vh;
+}
+
+/* .slider .noUi-handle {
+  height: 20px;
+  width: 20px;
+  top: -6px;
+  right: -10px; 
+  border-radius: 3px;
+} */
+
+.slider .noUi-connect {
+  background: #448dd0;
+  opacity: 0.6;
+}
+

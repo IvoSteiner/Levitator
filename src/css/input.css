@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AlpineJS fix, but still flickering visible? */
+[x-cloak] {
+  display: none !important;
+}
+
+/* DESKTOP */
+.customCSSvar {
+  --wBtn: 5vw;
+  --headerH: 4rem;
+
+  /* Subtracting 1rem extra in order to avoid unnecesary y-scrollbars */
+  /* better than just using vh!!! 100vh not optimal on tablets*/
+  --mainH: calc(98vh - var(--headerH) - 1rem);
+  --mdSlidersH: min(calc(100vw * 4 / 10 * 1.13), var(--mainH));
+
+  --plotBig: calc(var(--mainH) * 0.57);
+  --plotSmall: calc(var(--mainH) * 0.26);
+  --simControl: calc(var(--mainH) * 0.07);
+}
+
+/* Devices with small height */
+@media (max-height: 400px) {
+  .customCSSvar {
+    --headerH: 4rem;
+    --mainH: calc(600px - var(--headerH));
+    --mdSlidersH: var(--mainH);
+  }
+}
+
+/* Removing arrows from input type number field */
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+/* Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+
+/* Removing focus in order to add tailwindCSS styled focus */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+*:focus {
+  outline: none;
+}

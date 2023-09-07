@@ -1,0 +1,33 @@
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 10px;
+
+  height: 10px;
+  background:white;
+  outline: none;
+  border: 2px solid rgb(87,83,78);
+  border-radius: 8px;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: white;
+  cursor: pointer;
+  border: 2px solid rgb(87,83,78);
+  border-radius: 4px;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 30px;
+  background: white;
+  cursor: pointer;
+  border: 2px solid rgb(87,83,78);
+  border-radius: 4px;
+}
